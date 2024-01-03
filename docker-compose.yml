@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    image: zoo-service-image
+    container_name: zoo-service-container
+    env_file: .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 4001:4001
